@@ -62,7 +62,7 @@ The sensor value and LED status are displayed on the Serial Monitor for real-tim
 
 ## Automation Logic
 
-```text
+text
 IF Light Value > 500
     LED = ON
     Status = DARK
@@ -73,6 +73,7 @@ ELSE
 
 ---
     
+
 ## Arduino Source Code
 
 const int ldrPin = A0;
