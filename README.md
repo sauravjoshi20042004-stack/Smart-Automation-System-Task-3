@@ -1,77 +1,79 @@
-Smart Automation System Using Arduino and LDR
+# Smart Automation System Using Arduino and LDR
 
-Internship Task 3 – Embedded Systems & IoT
+## Internship Task 3 - Embedded Systems & IoT
 
-Project Overview
+### Project Overview
 
-This project is an upgraded version of the Smart Lighting System developed in Task 2. The system uses an LDR sensor with an Arduino UNO to automatically control an LED according to the surrounding light intensity.
+This project is an upgraded version of the Smart Lighting System developed in Task 2.
 
-The project also includes Serial Monitor feedback, which displays the sensor reading and the current status of the LED in real time.
+The system uses an Arduino UNO and an LDR sensor to automatically control an LED according to the surrounding light intensity.
 
-Objective
+The project also uses the Serial Monitor to display live sensor readings and the current LED status.
 
-The main objective of this project is to implement basic automation using sensor input and decision-making logic.
+---
 
-The system demonstrates:
+## Objective
+
+The main objective of this project is to convert a basic sensor prototype into a smart automation system.
+
+The project demonstrates:
 
 - Sensor-based decision making
 - IF/ELSE automation logic
 - Automatic LED control
-- Real-time sensor monitoring through Serial Monitor
+- Real-time sensor monitoring
 - Basic IoT-style system behavior
 
-Components Used
+---
+
+## Components Used
 
 - Arduino UNO
 - LDR Sensor
-- 10kΩ Resistor
+- 10k Ohm Resistor
 - LED
-- 220Ω Resistor
-- Jumper Wires
+- 220 Ohm Resistor
 - Breadboard
-- USB connection
+- Jumper Wires
+- USB Cable
 
-Software Used
+---
+
+## Software Used
 
 - Tinkercad Circuits
 - Arduino IDE
 - Embedded C/C++
 
-Working Principle
+---
 
-The LDR sensor detects the surrounding light intensity and provides an analog value to the Arduino through analog pin A0.
+## Working Principle
 
-The Arduino continuously reads the LDR value and compares it with a predefined threshold value.
+The LDR sensor detects the surrounding light intensity and sends an analog value to the Arduino through analog pin A0.
 
-If the light value is greater than 500, the system considers the environment dark and automatically turns the LED ON.
+The Arduino continuously reads the sensor value and compares it with a predefined threshold of 500.
 
-If the light value is 500 or below, the system considers the environment bright and turns the LED OFF.
+- If the LDR value is greater than 500, the system considers the environment dark and turns the LED ON.
+- If the LDR value is 500 or below, the system considers the environment bright and turns the LED OFF.
 
-The sensor value and system status are also displayed on the Serial Monitor for real-time monitoring.
+The sensor value and LED status are displayed on the Serial Monitor for real-time monitoring.
 
-Automation Logic
+---
 
-LDR Sensor
-    ↓
-Arduino reads sensor value
-    ↓
-Is Light Value > 500?
-    ↓
- ┌───────────────┐
- │      YES      │
- └───────┬───────┘
-         ↓
-   DARK CONDITION
-         ↓
-      LED ON
+## Automation Logic
 
-If NO:
-         ↓
-   BRIGHT CONDITION
-         ↓
-      LED OFF
+```text
+IF Light Value > 500
+    LED = ON
+    Status = DARK
 
-Source Code
+ELSE
+    LED = OFF
+    Status = BRIGHT
+
+---
+    
+## Arduino Source Code
 
 const int ldrPin = A0;
 const int ledPin = 13;
@@ -97,44 +99,100 @@ void loop() {
   }
 
   Serial.println("--------------------");
+
   delay(1000);
 }
 
-Monitoring Output
+---
 
-Example Serial Monitor output:
+## Serial Monitor Output
 
+Dark Condition
 Light Value: 969
 Status: DARK - LED ON
 --------------------
-
+Bright Condition
 Light Value: 49
 Status: BRIGHT - LED OFF
 --------------------
+The actual LDR values may vary during simulation depending on the light intensity.
 
-The actual sensor values may vary during simulation depending on the LDR light intensity.
+---
 
-Applications
+## Circuit Diagram
 
-This type of automated lighting system can be used in:
+The circuit consists of an Arduino UNO, LDR sensor, resistors and LED.
+The same sensor prototype from Task 2 has been upgraded with automation logic and monitoring functionality for Task 3.
+Circuit Diagram file:
+Circuit_Diagram.jpg
 
-- Smart homes
-- Automatic street lighting
-- Office lighting systems
-- Parking areas
-- Gardens and outdoor lighting
-- Energy-saving lighting systems
+---
 
-Advantages
+## Monitoring
 
-- Automatic operation
-- Simple and low-cost design
-- Reduces unnecessary power consumption
-- Real-time sensor monitoring
-- Easy to expand with additional sensors or IoT features
+The Serial Monitor provides real-time feedback from the system.
+It displays:
+Current LDR sensor value
+Detected light condition
+LED status
+This helps in monitoring the system while the simulation is running.
 
-Conclusion
+---
 
-The Task 3 project successfully upgrades the previous sensor prototype into a basic Smart Automation System. The Arduino makes an automatic decision based on the LDR sensor reading and controls the LED without manual intervention.
+## Applications
 
-The Serial Monitor provides real-time feedback about the sensor value and system status, demonstrating the basic working concept of smart embedded and IoT-style systems.
+This smart automation system can be used in:
+Smart home lighting
+Automatic street lighting
+Office lighting systems
+Parking areas
+Gardens and outdoor lighting
+Energy-saving lighting systems
+
+---
+
+## Advantages
+
+Automatic operation
+Simple and low-cost design
+Reduces unnecessary power consumption
+Real-time monitoring
+Easy to understand and implement
+Can be extended with IoT connectivity
+
+---
+
+## Future Improvements
+
+The project can be further improved by:
+Adding an LCD or OLED display
+Connecting the system to an ESP32
+Adding Wi-Fi connectivity
+Sending sensor data to a cloud dashboard
+Adding mobile monitoring and control
+
+---
+
+## Project Deliverables
+
+Circuit Diagram
+Arduino Source Code
+Serial Monitor Output
+Project Report
+Working Explanation
+
+---
+
+## Conclusion
+
+The Task 3 project successfully upgrades the previous Smart Lighting System into a basic Smart Automation System.
+The Arduino reads the LDR sensor value, makes an automatic decision using IF/ELSE logic, controls the LED according to the surrounding light condition, and displays the sensor data through the Serial Monitor.
+This project provides a basic understanding of automation, decision-making and monitoring in embedded systems and IoT applications.
+
+---
+
+##Author
+
+Saurav Joshi
+Internship Domain: Embedded Systems & IoT
+Task: 3 - Smart Automation System
