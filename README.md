@@ -1,4 +1,4 @@
-# Smart Automation System Using Arduino and LDR
+kisi# Smart Automation System Using Arduino and LDR
 
 ## Internship Task 3 - Embedded Systems & IoT
 
@@ -197,4 +197,5 @@ This project provides a basic understanding of automation, decision-making and m
 Saurav Joshi
 
 Internship Domain: Embedded Systems & IoT
+
 Task: 3 - Smart Automation System
