@@ -1,4 +1,4 @@
-kisi# Smart Automation System Using Arduino and LDR
+# Smart Automation System Using Arduino and LDR
 
 ## Internship Task 3 - Embedded Systems & IoT
 
